@@ -5,6 +5,7 @@ import { ServerComponent } from './server/server.component';// Importamos esse c
 import { ServersComponent } from './servers/servers.component';
 import { WarningalertComponent } from './warningalert/warningalert.component';
 import { SuccessalertComponent } from './successalert/successalert.component'; 
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { SuccessalertComponent } from './successalert/successalert.component';
     ServersComponent, WarningalertComponent, SuccessalertComponent 
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

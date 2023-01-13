@@ -1,3 +1,15 @@
-<!--<p>servers works!</p> -->
+<!--
+<label>Server Name</label>
+<input type="text" class="form-control" (input)="onUpdateServerName($event)"> 1 way of databinding -->
+
+<input type="text" class="form-control" [(ngModel)]="serverName"> <!--2 way of databinding-->
+<p>{{serverName}}</p><!-- 3 way of databinding-->
+<br>
+<button class="btn btn-primary" 
+[disabled]="!allowNewServer" 
+(click)="onCreateServer()">Add Server</button> <!--Using a property of HTML like property binding of Angular.-->
+ <p [innerText]="allowNewServer"></p><!-- Never must mixed 
+ property binding "[]" with interpolation "{}". Inside double quotes accept  TS code. --> 
+<p>{{serverCreationStatus}}</p>
 <app-server></app-server>
 <app-server></app-server>
