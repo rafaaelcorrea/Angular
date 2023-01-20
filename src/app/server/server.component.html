@@ -1,2 +1,4 @@
 <!--<h2 class="">I'm a Server Component</h2>-->
-<p>The {{'Server'}} of id {{serverId}} is {{showStatusServer()}}</p> <!--Databinding that shows TS.-->
+<p [ngStyle]="{backgroundColor: getColor()}"
+ [ngClass]="{onlineClass: serverStatus === 'online'}">
+ The {{'Server'}} of id {{serverId}} is {{showStatusServer()}}</p> <!--Databinding that shows TS.-->

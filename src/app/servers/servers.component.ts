@@ -10,9 +10,11 @@ export class ServersComponent implements OnInit{
   public allowNewServer: boolean = false; // Its example will used in property binding
   public serverCreationStatus: string = 'Server no created.';
   public serverName: string = 'testServer';
+  public serverCreated: boolean = false;
+  public arrayServers: string[] = ['Testeserver','Testserver 2'];
   constructor() {
     setTimeout(() => {
-      this.allowNewServer = true
+      this.allowNewServer = true;
     } ,2000);
   }
 
@@ -21,7 +23,10 @@ export class ServersComponent implements OnInit{
   }
 
   onCreateServer(){
+    this.serverCreated = true;
+    this.arrayServers.push(this.serverName);
     this.serverCreationStatus = `Server was created. The name he is ${this.serverName}`;
+    console.log(this.arrayServers)
   }
 
   onUpdateServerName( event: any){
